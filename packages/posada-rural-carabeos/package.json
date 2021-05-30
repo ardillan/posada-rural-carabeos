@@ -1,0 +1,13 @@
+{
+  "name": "posada-rural-carabeos",
+  "version": "1.0.0",
+  "description": "Frontity package created using the Frontity CLI.",
+  "keywords": [
+    "frontity",
+    "frontity-posadaRuralCarabeos"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "frontity": "^1.15.0"
+  }
+}
