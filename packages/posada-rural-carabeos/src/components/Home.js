@@ -7,7 +7,11 @@ import HomeCover from "../../assets/images/home_cover.png";
 
 import Footer from "./Footer";
 
-const Home = ({ state }) => {
+const Home = ({ state, libraries }) => {
+  const data = state.source.get(state.router.link);
+  const post = state.source[data.type][data.id];
+  const Html2React = libraries.html2react.Component;
+
   const Items = styled.div`
     width: ${state.theme.screenSizes.container};
     display: grid;
@@ -73,12 +77,12 @@ const Home = ({ state }) => {
   const MainHeaderContent = styled.div`
     width: ${state.theme.screenSizes.container};
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     background: white;
     box-shadow: 0px 0px 20px #e8f0ff;
     padding: 20px;
-    border-radius: 20px;
-    margin: -100px auto 20px;
+    margin: -300px auto 20px;
+    height: 200px;
     img {
       height: 350px;
     }
@@ -112,7 +116,7 @@ const Home = ({ state }) => {
     width: ${state.theme.screenSizes.container};
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 30px;
     margin: 100px auto;
     div:first-of-type::after {
@@ -176,10 +180,6 @@ const Home = ({ state }) => {
 
   let stickyPosts = [];
 
-  console.log("posts", posts);
-
-  console.log("stickyPosts", stickyPosts);
-
   const getStickyPosts = () => {
     keys.map((id) => {
       if (posts[id].sticky) {
@@ -193,8 +193,6 @@ const Home = ({ state }) => {
       return 0;
     });
   };
-
-  getStickyPosts();
 
   return (
     <>
@@ -221,10 +219,7 @@ const Home = ({ state }) => {
       </MainHeader>
       <MainHeaderBackground />
       <DescriptionContent>
-        <div>
-          <h1>Línea más</h1>
-          <p>Esto es un línea donde se puede meter contenido guachi</p>
-        </div>
+        <Html2React html={post.content.rendered} />
       </DescriptionContent>
       <Items>
         {/* {keys.slice(0, 3).map((id) => {

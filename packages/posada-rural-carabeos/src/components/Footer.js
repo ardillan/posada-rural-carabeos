@@ -5,7 +5,7 @@ const FooterContainer = styled.div`
   width: 100%;
   text-align: center;
   padding: 3rem;
-  background: #fabada;
+  background: #f1f3f7;
 `;
 
 const Footer = () => (

@@ -12,7 +12,7 @@ const Blog = ({ state, libraries }) => {
 
   const BlogHeader = styled.header`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    grid-template-columns: 1fr;
     margin-bottom: -60px;
     img {
       max-width: 100%;

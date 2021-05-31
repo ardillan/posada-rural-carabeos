@@ -12,7 +12,7 @@ const Post = ({ state, libraries }) => {
   const Html2React = libraries.html2react.Component;
   const PostHeader = styled.header`
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 1fr;
     grid-gap: 50px;
     margin-top: 40px;
     img {
@@ -101,7 +101,6 @@ const Post = ({ state, libraries }) => {
   return (
     <>
       <Container>
-        <h1>Post.js</h1>
         <PageContainer>
           <PostHeader>
             <div>{/* <PostFeaturedMedia id={post.featured_media} /> */}</div>
@@ -109,14 +108,7 @@ const Post = ({ state, libraries }) => {
               <h1>
                 <Html2React html={post.title.rendered} />
               </h1>
-              <time
-                css={css`
-                  font-size: 16px;
-                  padding: 20px 0;
-                `}
-              >
-                Escrito el {formatDate(post.date)}
-              </time>
+              <time>Escrito el {formatDate(post.date)}</time>
               <Html2React html={post.excerpt.rendered} />
             </div>
           </PostHeader>

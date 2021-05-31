@@ -43,6 +43,12 @@ const Theme = ({ state }) => {
             font-family: "Nunito";
             text-transform: uppercase;
           }
+
+          .wp-block-columns {
+            display: flex;
+            justify-content: space-evenly;
+            column-gap: 50px;
+          }
         `}
       />
     </>

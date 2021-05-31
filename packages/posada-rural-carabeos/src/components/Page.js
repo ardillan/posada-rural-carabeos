@@ -12,8 +12,7 @@ const Page = ({ state, libraries }) => {
   const Html2React = libraries.html2react.Component;
   const PostHeader = styled.header`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    margin-bottom: -60px;
+    grid-template-columns: 1fr;
     img {
       max-width: 100%;
       width: auto;
@@ -24,16 +23,12 @@ const Page = ({ state, libraries }) => {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      align-content: center;
       h1 {
         margin: 0;
       }
     }
     div:last-child {
-      padding: 10px;
       display: flex;
-      justify-content: center;
-      align-content: center;
     }
     /* Tablet */
     @media screen and (min-width: ${state.theme.screenSizes
@@ -75,14 +70,12 @@ const Page = ({ state, libraries }) => {
   return (
     <>
       <Container>
-        <h1>Page.js</h1>
         <PostContainer>
           <PostHeader>
             <div>
               <h1>
                 <Html2React html={post.title.rendered} />
               </h1>
-              <Html2React html={post.excerpt.rendered} />
             </div>
           </PostHeader>
         </PostContainer>

@@ -3,7 +3,7 @@ import { connect } from "frontity";
 import { styled, css } from "frontity";
 
 import Link from "./Link";
-import clouds from "../../assets/images/clouds.png";
+import backgroundHeader from "../../assets/images/top-header.jpg";
 import menuIcon from "../../assets/images/menu-icon.png";
 import menuIconClose from "../../assets/images/menu-icon-close.png";
 import logo from "../../assets/images/logo.png";
@@ -56,12 +56,12 @@ const Header = ({ state, actions }) => {
     <header
       css={css`
         background-color: ${state.theme.colors.softBlue};
-        background-image: url("${clouds}");
+        background-image: url("${backgroundHeader}");
         padding: 40px 20px;
-        background-size: 1400px 120px;
+        background-size: 1800px 500px;
         background-repeat: no-repeat;
         background-position: top;
-        min-height: 200px;
+        min-height: 500px;
         /* Mobile */
         @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
           padding: 20px 20px 0px 10px;
@@ -92,6 +92,9 @@ const Header = ({ state, actions }) => {
               </li>
               <li>
                 <Link href="/actividades/">Actividades</Link>
+              </li>
+              <li>
+                <Link href="/tarifas/">Tarifas</Link>
               </li>
             </ul>
           </>
@@ -144,6 +147,9 @@ const Header = ({ state, actions }) => {
           </Link>
           <Link type="button" href="/servicios/">
             Servicios
+          </Link>
+          <Link type="button" href="/tarifas/">
+            Tarifas
           </Link>
         </div>
       </Navigation>
