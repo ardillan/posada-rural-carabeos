@@ -45,7 +45,6 @@ const Blog = ({ state, libraries }) => {
   return (
     <>
       <Container>
-        <h1>Blog.js</h1>
         <BlogContainer>
           <PostsList />
         </BlogContainer>

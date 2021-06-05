@@ -82,7 +82,8 @@ const Home = ({ state, libraries }) => {
     box-shadow: 0px 0px 20px #e8f0ff;
     padding: 20px;
     margin: -300px auto 20px;
-    height: 200px;
+    height: 300px;
+    border-radius: 30px;
     img {
       height: 350px;
     }
@@ -115,27 +116,17 @@ const Home = ({ state, libraries }) => {
   const DescriptionContent = styled.div`
     width: ${state.theme.screenSizes.container};
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 30px;
-    margin: 100px auto;
-    div:first-of-type::after {
-      content: "";
-      background: ${state.theme.colors.yellow};
-      width: 100%;
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 1rem;
-      z-index: -1;
-      border-radius: 5px;
-      transform: rotate(2deg);
+
+    figure {
+      padding: 0;
+      margin: 0;
     }
+
     img {
       width: 100%;
       display: block;
       transform: rotate(-1deg);
-      border-radius: 8px;
+      border-radius: 20px;
     }
     /* Tablet */
     @media screen and (min-width: ${state.theme.screenSizes
@@ -197,8 +188,8 @@ const Home = ({ state, libraries }) => {
   return (
     <>
       <MainHeader>
-        <MainHeaderContent>
-          {/* <div>
+        {/* <MainHeaderContent>
+           <div>
             <img src={HomeCover} alt="Imágen de cabecera" />
           </div>
           <div>
@@ -214,8 +205,8 @@ const Home = ({ state, libraries }) => {
             <Link href={sticky[0].link} type="button">
               ¡Cuéntame más!
             </Link>
-          </div> */}
-        </MainHeaderContent>
+          </div> 
+        </MainHeaderContent>*/}
       </MainHeader>
       <MainHeaderBackground />
       <DescriptionContent>
