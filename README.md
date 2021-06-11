@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Frontity](https://frontity.org/).
 
+# Clases que sirven de ayuda
+
+`text-center` > Centra texto
+`text-featured` > Aumenta el tamaño de párrafo
+`featured-card` > Dentro de dos columnas, justifca el texto y le añade énfasis
+
 #### Table of Contents
 
 - [Launch a development server](#launch-a-development-server)
