@@ -4,6 +4,7 @@ import { styled, css } from "frontity";
 
 import Link from "./Link";
 import backgroundHeader from "../../assets/images/top-header.jpg";
+import claim from "../../assets/images/logo.png";
 import menuIcon from "../../assets/images/menu-icon.png";
 import menuIconClose from "../../assets/images/menu-icon-close.png";
 import logo from "../../assets/images/logo.png";
@@ -61,7 +62,8 @@ const Header = ({ state, actions }) => {
         background-size: 1800px 500px;
         background-repeat: no-repeat;
         background-position: top;
-        min-height: 330px;
+        min-height: 390px;
+        border-top: 10px solid ${state.theme.colors.darkYellow};
         /* Mobile */
         @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
           padding: 20px 20px 0px 10px;

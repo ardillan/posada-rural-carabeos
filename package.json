@@ -17,6 +17,7 @@
   },
   "prettier": {},
   "dependencies": {
+    "15": "^0.0.0",
     "@frontity/core": "^1.11.1",
     "@frontity/html2react": "^1.6.2",
     "@frontity/tiny-router": "^1.4.1",

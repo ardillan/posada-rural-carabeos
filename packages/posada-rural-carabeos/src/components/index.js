@@ -25,7 +25,7 @@ const Root = ({ state }) => {
       <Header />
       <main>
         <Switch>
-          <Loading when={data.isFetching} />
+          <Loading when={!data.isFetching} />
           <Home when={data.isHome} posts={posts} />
           <Post when={data.isPost && data.route != "/blog/"} />
           <Page
