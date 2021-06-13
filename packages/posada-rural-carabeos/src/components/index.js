@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { connect } from "frontity";
+import React from "react";
+import { connect, css } from "frontity";
 import Switch from "@frontity/components/switch";
 
 import Home from "./Home";
@@ -10,7 +10,16 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Theme from "./Theme";
 
-const Loading = () => <p>Cargando</p>;
+const Loading = () => (
+  <p
+    css={css`
+      background: none;
+      border: none;
+    `}
+  >
+    Cargando
+  </p>
+);
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -25,7 +34,7 @@ const Root = ({ state }) => {
       <Header />
       <main>
         <Switch>
-          <Loading when={!data.isFetching} />
+          <Loading when={data.isFetching} />
           <Home when={data.isHome} posts={posts} />
           <Post when={data.isPost && data.route != "/blog/"} />
           <Page
@@ -33,6 +42,7 @@ const Root = ({ state }) => {
           />
           <Blog when={data.isArchive && data.route == "/blog/"} />
         </Switch>
+        <Footer />
       </main>
     </>
   );

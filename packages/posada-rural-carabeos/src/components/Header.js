@@ -4,7 +4,6 @@ import { styled, css } from "frontity";
 
 import Link from "./Link";
 import backgroundHeader from "../../assets/images/top-header.jpg";
-import claim from "../../assets/images/logo.png";
 import menuIcon from "../../assets/images/menu-icon.png";
 import menuIconClose from "../../assets/images/menu-icon-close.png";
 import logo from "../../assets/images/logo.png";
