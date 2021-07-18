@@ -96,6 +96,9 @@ const Header = ({ state, actions }) => {
               <li>
                 <Link href="/tarifas/">Tarifas</Link>
               </li>
+              <li>
+                <Link href="/nuestros-amigos/">Nuestros amigos</Link>
+              </li>
             </ul>
           </>
         ) : (
@@ -150,6 +153,9 @@ const Header = ({ state, actions }) => {
           </Link>
           <Link type="button" href="/tarifas/">
             Tarifas
+          </Link>
+          <Link type="button" href="/tarifas/">
+            Nuestros amigos
           </Link>
         </div>
       </Navigation>
