@@ -160,7 +160,7 @@ const Header = ({ state, actions }) => {
           <Link type="button" href="/tarifas/">
             Tarifas
           </Link>
-          <Link type="button" href="/tarifas/">
+          <Link type="button" href="/nuestros-amigos/">
             Nuestros amigos
           </Link>
         </div>
