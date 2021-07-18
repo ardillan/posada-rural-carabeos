@@ -60,8 +60,11 @@ const PostsList = ({ state, libraries }) => {
       font-weight: 400;
       margin: 0;
       color: ;
-      text-decoration: underline;
+      text-decoration: none;
       text-decoration-thickness: 3px;
+    }
+    a {
+      color: inherit;
     }
     date {
       font-size: 14px;
@@ -71,16 +74,24 @@ const PostsList = ({ state, libraries }) => {
     }
   `;
 
+  const Article = styled.div`
+    padding: 20px;
+    border: 2px solid black;
+    margin: 30px 0;
+  `;
+
   return (
     <>
       <Items>
         {posts.map((post) => {
           return (
-            <Link href={post.link} key={post.id}>
-              <h2>{renderText(post.title.rendered)}</h2>
-              <time>Escrito el {formatDate(post.date)}</time>
-              <Html2React html={post.excerpt.rendered} />
-            </Link>
+            <Article>
+              <Link href={post.link} key={post.id}>
+                <h2>{renderText(post.title.rendered)}</h2>
+                <time>Escrito el {formatDate(post.date)}</time>
+                <Html2React html={post.excerpt.rendered} />
+              </Link>
+            </Article>
           );
         })}
       </Items>

@@ -33,7 +33,7 @@ const settings = {
           colors: {
             blue: "#abd6ff",
             softBlue: "#C6E3FF",
-            darkYellow: "#FFD807",
+            darkYellow: "#FEB02C",
             dark: "#27214D",
           },
           effects: {

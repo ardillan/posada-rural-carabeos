@@ -61,7 +61,8 @@ const Header = ({ state, actions }) => {
         background-size: 1800px 500px;
         background-repeat: no-repeat;
         background-position: top;
-        min-height: 330px;
+        min-height: 390px;
+        border-top: 10px solid ${state.theme.colors.darkYellow};
         /* Mobile */
         @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
           padding: 20px 20px 0px 10px;

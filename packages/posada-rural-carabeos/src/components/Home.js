@@ -117,15 +117,9 @@ const Home = ({ state, libraries }) => {
     width: ${state.theme.screenSizes.container};
     margin: auto;
 
-    figure {
-      padding: 0;
-      margin: 0;
-    }
-
     img {
       width: 100%;
       display: block;
-      transform: rotate(-1deg);
       border-radius: 20px;
     }
     /* Tablet */

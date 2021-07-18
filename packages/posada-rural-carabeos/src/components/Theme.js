@@ -69,19 +69,31 @@ const Theme = ({ state }) => {
             width: 900px;
             display: grid;
             grid-template-columns: 1fr;
-            background: white;
-            box-shadow: 0px 0px 20px #e8f0ff;
-            padding: 20px;
-            margin: -300px auto 20px;
-            height: 300px;
-            border-radius: 30px;
+            margin: -450px auto 120px;
             align-items: center;
-            font-size: 40px;
+
+            img {
+              object-fit: none;
+            }
           }
 
           .featured-card {
             justify-content: center;
             align-items: center;
+            img {
+              transform: rotate(-1deg);
+            }
+            p {
+              font-size: 20px;
+            }
+          }
+
+          .featured-card-reverse {
+            justify-content: center;
+            align-items: center;
+            img {
+              transform: rotate(1deg);
+            }
 
             p {
               font-size: 20px;
