@@ -75,6 +75,27 @@ const Theme = ({ state }) => {
             img {
               object-fit: none;
             }
+
+            /* Tablet */
+            @media screen and (min-width: ${state.theme.screenSizes.mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+              width: 100%;
+              align-items: center;
+              margin: auto;
+              img {
+                width: auto:
+              }
+            }
+
+            /* Mobile */
+            @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+              width: 100%;
+              align-items: center;
+              margin: auto;
+
+              img {
+                width: auto:
+              }
+            }
           }
 
           .featured-card {
@@ -106,6 +127,22 @@ const Theme = ({ state }) => {
             grid-template-columns: 1fr 1fr;
             grid-column-gap: 50px;
             margin: 40px 0;
+          }
+
+          .sponsors-images {
+            div {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+
+              /* Tablet */
+              @media screen and (min-width: ${state.theme.screenSizes.mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+                grid-template-columns: 1fr;
+              }
+              /* Mobile */
+              @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+                grid-template-columns: 1fr;
+              }
+            }
           }
         `}
       />

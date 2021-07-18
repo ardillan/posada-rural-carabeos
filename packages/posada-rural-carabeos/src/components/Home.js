@@ -125,17 +125,13 @@ const Home = ({ state, libraries }) => {
     /* Tablet */
     @media screen and (min-width: ${state.theme.screenSizes
         .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
-      grid-template-columns: 1fr;
-      width: auto;
-      padding: 20px;
-      margin: 0;
+      width: 100%;
+      margin: auto;
     }
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
-      grid-template-columns: 1fr;
-      width: auto;
-      padding: 20px;
-      margin: 0;
+      width: 100%;
+      margin: auto;
     }
   `;
 

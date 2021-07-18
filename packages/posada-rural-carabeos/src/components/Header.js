@@ -55,7 +55,7 @@ const Header = ({ state, actions }) => {
   return (
     <header
       css={css`
-        background-color: ${state.theme.colors.softBlue};
+        background-color: ${state.theme.colors.darkYellow};
         background-image: url("${backgroundHeader}");
         padding: 40px 20px;
         background-size: 1800px 500px;
@@ -63,11 +63,13 @@ const Header = ({ state, actions }) => {
         background-position: top;
         min-height: 390px;
         border-top: 10px solid ${state.theme.colors.darkYellow};
+
         /* Mobile */
         @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
           padding: 20px 20px 0px 10px;
           background-size: 1000px 70px;
           min-height: 50px;
+          background-image: none;
         }
       `}
     >
@@ -88,6 +90,9 @@ const Header = ({ state, actions }) => {
                 padding: 0;
               `}
             >
+              <li>
+                <Link href="/">Inicio</Link>
+              </li>
               <li>
                 <Link href="/servicios/">Servicios</Link>
               </li>
@@ -125,7 +130,7 @@ const Header = ({ state, actions }) => {
       <Navigation
         css={css`
           margin: auto;
-          width: ${state.theme.screenSizes.container};
+          width: 90%;
           /* Tablet */
           @media screen and (min-width: ${state.theme.screenSizes
               .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
