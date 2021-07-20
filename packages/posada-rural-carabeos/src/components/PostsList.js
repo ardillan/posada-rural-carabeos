@@ -33,7 +33,6 @@ const PostsList = ({ state, libraries }) => {
       }
     }
     div:last-child {
-      padding: 10px;
       display: flex;
       justify-content: center;
       align-content: center;
@@ -76,8 +75,10 @@ const PostsList = ({ state, libraries }) => {
 
   const Article = styled.div`
     padding: 20px;
-    border: 2px solid black;
+    border: 2px solid #005636;
     margin: 30px 0;
+    background: ${state.theme.colors.green};
+    color: white;
   `;
 
   return (

@@ -49,7 +49,6 @@ const Blog = ({ state, libraries }) => {
           <PostsList />
         </BlogContainer>
       </Container>
-      <Footer />
     </>
   );
 };

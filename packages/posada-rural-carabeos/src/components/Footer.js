@@ -6,7 +6,8 @@ const Footer = ({ state }) => {
     width: 100%;
     text-align: center;
     padding: 3rem;
-    background: #f1f3f7;
+    background: ${state.theme.colors.green};
+    color: white;
 
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {

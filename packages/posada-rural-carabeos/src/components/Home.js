@@ -119,7 +119,6 @@ const Home = ({ state, libraries }) => {
     img {
       width: 100%;
       display: block;
-      border-radius: 20px;
     }
     /* Tablet */
     @media screen and (min-width: ${state.theme.screenSizes
@@ -219,8 +218,6 @@ const Home = ({ state, libraries }) => {
           <Link href="/blog/">Ver más entradas</Link>
         </MorePostsButton>
       </Items>
-
-      <Footer />
     </>
   );
 };

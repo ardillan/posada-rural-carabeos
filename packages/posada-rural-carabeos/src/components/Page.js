@@ -25,6 +25,12 @@ const Page = ({ state, libraries }) => {
       flex-wrap: wrap;
       h1 {
         margin: 0;
+        text-align: center;
+        background: ${state.theme.colors.green};
+        filter: brightness(0.9);
+        width: 100%;
+        padding: 30px;
+        color: white;
       }
     }
     div:last-child {
@@ -42,6 +48,14 @@ const Page = ({ state, libraries }) => {
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
       grid-template-columns: 1fr;
+
+      div:first-of-type {
+        h1 {
+          width: auto;
+          padding: 20px 60px;
+        }
+      }
+
       img {
         max-width: 100%;
         width: auto;
@@ -50,7 +64,7 @@ const Page = ({ state, libraries }) => {
   `;
 
   const PostContainer = styled.article`
-    width: 900px;
+    width: auto;
     margin: auto;
   `;
 
@@ -87,7 +101,6 @@ const Page = ({ state, libraries }) => {
           </PostContent>
         </PostContainer>
       </Container>
-      <Footer />
     </>
   );
 };

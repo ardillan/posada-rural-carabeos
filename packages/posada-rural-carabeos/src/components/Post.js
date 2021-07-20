@@ -29,7 +29,6 @@ const Post = ({ state, libraries }) => {
       align-items: center;
     }
     div:last-child {
-      padding: 10px;
       display: flex;
       flex-direction: column;
       h1,
@@ -56,6 +55,7 @@ const Post = ({ state, libraries }) => {
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
       width: auto;
       grid-template-columns: 1fr;
+
       img {
         height: auto;
         width: 100%;
@@ -119,8 +119,6 @@ const Post = ({ state, libraries }) => {
           <Html2React html={renderText(post.content.rendered)} />
         </PageContainer>
       </Container>
-
-      <Footer />
     </>
   );
 };

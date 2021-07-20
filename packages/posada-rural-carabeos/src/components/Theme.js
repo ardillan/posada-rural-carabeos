@@ -98,12 +98,19 @@ const Theme = ({ state }) => {
             }
           }
 
+          .googlemaps {
+            iframe { 
+              width: 100%;
+            }
+          }
+
           .featured-card {
             justify-content: center;
             align-items: center;
-            img {
-              transform: rotate(-1deg);
+            figure {
+              margin: 0;
             }
+    
             p {
               font-size: 20px;
             }
@@ -112,22 +119,15 @@ const Theme = ({ state }) => {
           .featured-card-reverse {
             justify-content: center;
             align-items: center;
-            img {
-              transform: rotate(1deg);
+            figure {
+              margin: 0;
             }
-
+          
             p {
               font-size: 20px;
             }
           }
 
-          .wp-block-columns {
-            display: grid;
-            justify-content: space-evenly;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 50px;
-            margin: 40px 0;
-          }
 
           .sponsors-images {
             div {
@@ -144,6 +144,32 @@ const Theme = ({ state }) => {
               }
             }
           }
+
+          .wp-block-columns {
+            display: grid;
+            justify-content: space-evenly;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 50px;
+            margin: 40px 0;
+            background: ${state.theme.colors.green};
+            color: white;
+
+            /* Mobile */
+            @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+              grid-column-gap: 50px;
+              display: grid;
+              grid-template-rows: 1fr;
+              grid-template-columns: 1fr;
+              padding: 10px;
+              margin: 20px;
+              border: 2px dashed #006f46;
+              
+              text-align: center;
+            }
+
+          }
+          }
+
         `}
       />
     </>
