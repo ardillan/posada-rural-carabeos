@@ -35,6 +35,7 @@ const settings = {
             softBlue: "#C6E3FF",
             darkYellow: "#FEB02C",
             dark: "#27214D",
+            green: "#006F45",
           },
           effects: {
             transition: "all 0.5s",

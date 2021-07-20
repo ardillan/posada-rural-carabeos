@@ -6,17 +6,15 @@ const Link = ({ href, actions, children, type }) => {
     switch (type) {
       case "button":
         return styled.a`
-          color: initial;
           padding-right: 20px;
-          background: white;
-          padding: 10px 25px;
           border-radius: 30px;
           text-decoration: none;
           margin-right: 20px;
           font-size: 17px;
-          font-weight: 500;
+          color: white;
           :hover {
-            box-shadow: 0px 0px 20px #e8f0ff;
+            text-decoration: underline;
+            cursor: pointer;
           }
         `;
 

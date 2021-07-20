@@ -41,14 +41,13 @@ const Home = ({ state, libraries }) => {
   `;
 
   const MainHeader = styled.div`
-    padding: 20px;
+    padding: 0;
   `;
 
   const MainHeaderBackground = styled.div`
     width: 100%;
     background-repeat: no-repeat;
-    top: -400px;
-    position: absolute;
+
     z-index: -1;
     background-position: center;
     margin: auto;

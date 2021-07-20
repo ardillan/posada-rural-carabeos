@@ -69,7 +69,7 @@ const Theme = ({ state }) => {
             width: 900px;
             display: grid;
             grid-template-columns: 1fr;
-            margin: -450px auto 120px;
+            // margin: -450px auto 120px;
             align-items: center;
 
             img {

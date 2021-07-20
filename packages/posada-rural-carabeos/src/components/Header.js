@@ -34,11 +34,25 @@ const Header = ({ state, actions }) => {
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
       display: block;
+      position: relative;
+      ul {
+        padding: 0;
+        margin: 0;
+        a {
+          padding: 20px;
+          background: #01613d;
+          margin: 0;
+          color: white;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   `;
 
   const Logo = styled.img`
-    height: 45px;
+    // height: 45px;
   `;
 
   const Navigation = styled.nav`
@@ -52,85 +66,110 @@ const Header = ({ state, actions }) => {
     }
   `;
 
+  const MobileMenu = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  `;
+
   return (
     <header
       css={css`
-        background-color: ${state.theme.colors.darkYellow};
+        background-color: ${state.theme.colors.green};
         background-image: url("${backgroundHeader}");
-        padding: 40px 20px;
         background-size: 1800px 500px;
         background-repeat: no-repeat;
         background-position: top;
         min-height: 390px;
-        border-top: 10px solid ${state.theme.colors.darkYellow};
 
         /* Mobile */
         @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
-          padding: 20px 20px 0px 10px;
-          background-size: 1000px 70px;
-          min-height: 50px;
           background-image: none;
+          min-height: initial;
         }
       `}
     >
       <Menu>
-        {state.theme.isMenuOpen ? (
-          <>
-            <button onClick={actions.theme.closeMenu}>
-              <img
-                src={menuIconClose}
+        <MobileMenu>
+          {state.theme.isMenuOpen ? (
+            <>
+              <button
+                onClick={actions.theme.closeMenu}
                 css={css`
-                  width: 25px;
-                  height: 25px;
+                  background: none;
+                  border: none;
+                  height: 40px;
                 `}
-              />
-            </button>
-            <ul
-              css={css`
-                padding: 0;
-              `}
-            >
-              <li>
-                <Link href="/">Inicio</Link>
-              </li>
-              <li>
-                <Link href="/servicios/">Servicios</Link>
-              </li>
-              <li>
-                <Link href="/actividades/">Actividades</Link>
-              </li>
-              <li>
-                <Link href="/tarifas/">Tarifas</Link>
-              </li>
-              <li>
-                <Link href="/nuestros-amigos/">Nuestros amigos</Link>
-              </li>
-            </ul>
-          </>
-        ) : (
-          <button
-            onClick={actions.theme.openMenu}
-            css={css`
-              background: none;
-              border: none;
-            `}
-          >
-            {" "}
-            <img
-              src={menuIcon}
-              css={css`
-                width: 25px;
-                height: 25px;
-              `}
+              >
+                {" "}
+                <img
+                  src={menuIconClose}
+                  css={css`
+                    width: 25px;
+                    height: 25px;
+                  `}
+                />
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                onClick={actions.theme.openMenu}
+                css={css`
+                  background: none;
+                  border: none;
+                  height: 40px;
+                `}
+              >
+                {" "}
+                <img
+                  src={menuIcon}
+                  css={css`
+                    width: 25px;
+                    height: 25px;
+                  `}
+                />
+              </button>
+            </>
+          )}
+          <Link href="/">
+            <Logo
+              src={logo}
+              width="100"
+              style={{ height: 30, width: "auto" }}
             />
-          </button>
+          </Link>{" "}
+        </MobileMenu>
+        {state.theme.isMenuOpen && (
+          <ul>
+            <li>
+              <Link href="/">Inicio</Link>
+            </li>
+            <li>
+              <Link href="/servicios/">Servicios</Link>
+            </li>
+            <li>
+              <Link href="/actividades/">Actividades</Link>
+            </li>
+            <li>
+              <Link href="/tarifas/">Tarifas</Link>
+            </li>
+            <li>
+              <Link href="/nuestros-amigos/">Nuestros amigos</Link>
+            </li>
+          </ul>
         )}
       </Menu>
-
       <Navigation
         css={css`
           margin: auto;
-          width: 90%;
+          width: 100%;
+          background: ${state.theme.colors.green};
+
+          div {
+            align-items: center;
+            display: flex;
+          }
           /* Tablet */
           @media screen and (min-width: ${state.theme.screenSizes
               .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
@@ -144,7 +183,7 @@ const Header = ({ state, actions }) => {
       >
         <div>
           <Link href="/">
-            <Logo src={logo} />
+            <Logo src={logo} width="100" style={{ padding: 15 }} />
           </Link>
         </div>
         <div>
