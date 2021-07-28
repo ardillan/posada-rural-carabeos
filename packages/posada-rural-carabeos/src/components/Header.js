@@ -75,7 +75,7 @@ const Header = ({ state, actions }) => {
   return (
     <header
       css={css`
-        background-color: ${state.theme.colors.green};
+        background-color: ${state.theme.colors.darkGreen};
         background-image: url("${backgroundHeader}");
         background-size: 1800px 500px;
         background-repeat: no-repeat;
@@ -164,7 +164,7 @@ const Header = ({ state, actions }) => {
         css={css`
           margin: auto;
           width: 100%;
-          background: ${state.theme.colors.green};
+          background: ${state.theme.colors.darkGreen};
 
           div {
             align-items: center;

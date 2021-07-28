@@ -36,7 +36,7 @@ const settings = {
             darkYellow: "#FEB02C",
             dark: "#27214D",
             green: "#008000",
-            darkGreen: "#008000",
+            darkGreen: "#006600",
           },
           effects: {
             transition: "all 0.5s",
