@@ -75,14 +75,14 @@ const Footer = ({ state }) => {
     @media screen and (min-width: ${state.theme.screenSizes
         .mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
       grid-template-columns: 1fr;
-      width: 100%;
+      width: 90%;
       text-align: center;
     }
     /* Mobile */
     @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
       grid-template-columns: 1fr;
       text-align: center;
-      width: 100%;
+      width: 90%;
     }
   `;
 

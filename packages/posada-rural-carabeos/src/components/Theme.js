@@ -36,6 +36,19 @@ const Theme = ({ state }) => {
             padding: 0;
             margin: 10px 0;
           }
+
+          .container {
+            /* Tablet */
+            @media screen and (min-width: ${state.theme.screenSizes.mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+              padding: 0 25px;
+              background: yellow;
+            }
+            /* Mobile */
+            @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+              padding: 0 25px;
+            }
+          }
+
           figcaption {
             text-align: center;
             font-size: 16px;
@@ -57,7 +70,7 @@ const Theme = ({ state }) => {
           .wp-block-separator {
             margin: 35px 0;
             border: none;
-            border: 4px dashed ${state.theme.colors.blue};
+            border: 4px dashed ${state.theme.colors.green};
             border-style: dotted;
             border-bottom: 0;
             border-left: 0;
@@ -113,6 +126,8 @@ const Theme = ({ state }) => {
     
             p {
               font-size: 20px;
+              max-width: 80%;
+              margin: auto;
             }
           }
 
@@ -125,6 +140,8 @@ const Theme = ({ state }) => {
           
             p {
               font-size: 20px;
+              max-width: 80%;
+              margin: auto;
             }
           }
 
@@ -149,10 +166,13 @@ const Theme = ({ state }) => {
             display: grid;
             justify-content: space-evenly;
             grid-template-columns: 1fr 1fr;
-            grid-column-gap: 50px;
             margin: 40px 0;
             background: ${state.theme.colors.green};
             color: white;
+            background: white;
+            color: black;
+            border: 2px solid #008000;
+            
 
             /* Mobile */
             @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
@@ -162,9 +182,11 @@ const Theme = ({ state }) => {
               grid-template-columns: 1fr;
               padding: 10px;
               margin: 20px;
-              border: 2px dashed #006f46;
-              
+              border: 2px solid #006f46;
+              background: white;
+              color: black;
               text-align: center;
+              box-shadow: 5px 5px 5px #e4e4e4;
             }
 
           }

@@ -28,7 +28,6 @@ const Header = ({ state, actions }) => {
         list-style-type: none;
         font-size: 22px;
         border-radius: 2px;
-        box-shadow: 2px 2px grey;
       }
     }
     /* Mobile */
@@ -40,9 +39,9 @@ const Header = ({ state, actions }) => {
         margin: 0;
         a {
           padding: 20px;
-          background: #01613d;
+          background: white;
           margin: 0;
-          color: white;
+          color: black;
           &:hover {
             text-decoration: underline;
           }
@@ -79,8 +78,8 @@ const Header = ({ state, actions }) => {
         background-image: url("${backgroundHeader}");
         background-size: 1800px 500px;
         background-repeat: no-repeat;
-        background-position: top;
-        min-height: 390px;
+        background-position: center;
+        min-height: 200px;
 
         /* Mobile */
         @media screen and (max-width: ${state.theme.screenSizes.mobile}) {

@@ -36,6 +36,7 @@ const Home = ({ state, libraries }) => {
       min-height: 200px;
       position: relative;
       margin-bottom: -160px;
+      display: none;
     }
   `;
 

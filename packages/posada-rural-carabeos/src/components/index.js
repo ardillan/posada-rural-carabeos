@@ -9,17 +9,7 @@ import Blog from "./Blog";
 import Footer from "./Footer";
 import Header from "./Header";
 import Theme from "./Theme";
-
-const Loading = () => (
-  <p
-    css={css`
-      background: none;
-      border: none;
-    `}
-  >
-    Cargando
-  </p>
-);
+import Loading from "./Loading";
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
