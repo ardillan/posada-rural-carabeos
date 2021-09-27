@@ -77,8 +77,8 @@ const PostsList = ({ state, libraries }) => {
     padding: 20px;
     border: 2px solid #005636;
     margin: 30px 0;
-    background: ${state.theme.colors.green};
-    color: white;
+    background: white;
+    color: black;
   `;
 
   return (

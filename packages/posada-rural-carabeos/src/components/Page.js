@@ -65,7 +65,7 @@ const Page = ({ state, libraries }) => {
 
   const PostContainer = styled.article`
     width: auto;
-    margin: auto;
+    margin: 30px 0 auto;
   `;
 
   const PostContent = styled.div`
