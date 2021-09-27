@@ -38,7 +38,8 @@ const Blog = ({ state, libraries }) => {
   `;
 
   const BlogContainer = styled.article`
-    width: 900px;
+    width: 90%;
+    max-width: 900px;
     margin: auto;
   `;
 

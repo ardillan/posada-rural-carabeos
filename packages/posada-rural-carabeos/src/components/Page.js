@@ -71,6 +71,7 @@ const Page = ({ state, libraries }) => {
   const PostContent = styled.div`
     img {
       max-width: 100%;
+      height: auto;
     }
     .coblocks-gallery {
       display: grid;

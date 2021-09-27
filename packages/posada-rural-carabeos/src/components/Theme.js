@@ -81,7 +81,6 @@ const Theme = ({ state }) => {
             width: 900px;
             display: grid;
             grid-template-columns: 1fr;
-            // margin: -450px auto 120px;
             align-items: center;
 
             img {
@@ -113,6 +112,62 @@ const Theme = ({ state }) => {
           .googlemaps {
             iframe { 
               width: 100%;
+            }
+          }
+
+          .card {
+            background: white;
+            border: 2px solid ${state.theme.colors.green};
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+          }
+
+          .two-columns {
+            .wp-block-group__inner-container {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-gap: 30px;
+              margin-bottom: 20px;
+            }
+
+            /* Tablet */
+            @media screen and (min-width: ${state.theme.screenSizes.mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+              .wp-block-group__inner-container {
+                grid-template-columns: 1fr;
+                margin-bottom: 30px;
+                text-align: center;
+              }
+            }
+            /* Mobile */
+            @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+              .wp-block-group__inner-container {
+                grid-template-columns: 1fr;
+                margin-bottom: 30px;
+                text-align: center;
+              }
+            }
+          }
+
+          .three-columns {
+            .wp-block-group__inner-container {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-gap: 30px;
+            }
+
+            /* Tablet */
+            @media screen and (min-width: ${state.theme.screenSizes.mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
+              .wp-block-group__inner-container {
+                grid-template-columns: 1fr;
+              }
+            }
+            /* Mobile */
+            @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
+              .wp-block-group__inner-container {
+                grid-template-columns: 1fr;
+              }
             }
           }
 
