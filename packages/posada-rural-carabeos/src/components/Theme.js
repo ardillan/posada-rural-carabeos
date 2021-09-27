@@ -41,7 +41,6 @@ const Theme = ({ state }) => {
             /* Tablet */
             @media screen and (min-width: ${state.theme.screenSizes.mobile}) and (max-width: ${state.theme.screenSizes.tablet}) {
               padding: 0 25px;
-              background: yellow;
             }
             /* Mobile */
             @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
