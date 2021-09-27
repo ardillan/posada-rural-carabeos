@@ -24,7 +24,7 @@ const Loading = () => {
       border-radius: 50%;
       animation: posada-rural-loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
     }
-    .posada-rural-loader div:nth-child(2) {
+    .posada-rural-loader div:nth-of-type(2) {
       animation-delay: -0.5s;
     }
     @keyframes posada-rural-loader {
