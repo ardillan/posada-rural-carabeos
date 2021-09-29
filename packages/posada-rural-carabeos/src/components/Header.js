@@ -163,6 +163,7 @@ const Header = ({ state, actions }) => {
           div {
             align-items: center;
             display: flex;
+            margin-right: 30px;
           }
           /* Tablet */
           @media screen and (min-width: ${state.theme.screenSizes
