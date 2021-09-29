@@ -79,6 +79,11 @@ const PostsList = ({ state, libraries }) => {
     margin: 30px 0;
     background: white;
     color: black;
+
+    time {
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
   `;
 
   return (
@@ -86,7 +91,7 @@ const PostsList = ({ state, libraries }) => {
       <Items>
         {posts.map((post) => {
           return (
-            <Article>
+            <Article key={post.id}>
               <Link href={post.link} key={post.id}>
                 <h2>{renderText(post.title.rendered)}</h2>
                 <time>Escrito el {formatDate(post.date)}</time>

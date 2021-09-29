@@ -13,8 +13,6 @@ const Post = ({ state, libraries }) => {
   const PostHeader = styled.header`
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 50px;
-    margin-top: 40px;
     img {
       height: 280px;
       width: 280px;
@@ -31,6 +29,7 @@ const Post = ({ state, libraries }) => {
     div:last-child {
       display: flex;
       flex-direction: column;
+      margin-top: 20px;
       h1,
       p {
         margin: 0;
@@ -63,6 +62,14 @@ const Post = ({ state, libraries }) => {
         object-fit: contain;
       }
     }
+  `;
+
+  const Excerpt = styled.div`
+    background: #f5f5f5;
+    padding: 30px;
+    border-left: 2px solid #006601;
+    margin-top: 10px;
+    display: block !important;
   `;
   const PageContainer = styled.article`
     width: ${state.theme.screenSizes.pageContainer};
@@ -98,6 +105,7 @@ const Post = ({ state, libraries }) => {
       width: auto;
     }
   `;
+
   return (
     <>
       <Container>
@@ -109,7 +117,9 @@ const Post = ({ state, libraries }) => {
                 <Html2React html={post.title.rendered} />
               </h1>
               <time>Escrito el {formatDate(post.date)}</time>
-              <Html2React html={post.excerpt.rendered} />
+              <Excerpt>
+                <Html2React html={post.excerpt.rendered} />
+              </Excerpt>
             </div>
           </PostHeader>
         </PageContainer>
