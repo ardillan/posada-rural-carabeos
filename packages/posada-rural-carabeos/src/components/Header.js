@@ -6,6 +6,7 @@ import Link from "./Link";
 import menuIcon from "../../assets/images/menu-icon.png";
 import menuIconClose from "../../assets/images/menu-icon-close.png";
 import logo from "../../assets/images/logo.png";
+import facebookIcon from "../../assets/images/facebook-icon.svg";
 
 const Header = ({ state, actions }) => {
   const Menu = styled.div`
@@ -195,6 +196,19 @@ const Header = ({ state, actions }) => {
           <Link type="button" href="/nuestros-amigos/">
             Nuestros amigos
           </Link>
+          <a href="https://www.facebook.com/posadacarabeos" target="_blank">
+            <img
+              src={facebookIcon}
+              width="25"
+              alt="Enlace a Facebook de Los Carabeos"
+              title="Enlace a Facebook de Los Carabeos"
+              height="25"
+              css={css`
+                width: 25px;
+                height: 25px;
+              `}
+            />
+          </a>
         </div>
       </Navigation>
     </header>
