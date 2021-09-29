@@ -10,6 +10,11 @@ const Theme = ({ state }) => {
         <meta name="description" content={state.frontity.description} />
         <html lang="es" />
         <link rel="canonical" href={state.router.link} />
+        <link
+          rel="icon"
+          type="image/png"
+          href="https://posadaruralcarabeos.files.wordpress.com/2021/09/favicon.png"
+        ></link>
       </Head>
       <Fonts />
       <Global
