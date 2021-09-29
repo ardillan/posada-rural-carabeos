@@ -3,7 +3,6 @@ import { connect } from "frontity";
 import { styled, css } from "frontity";
 
 import Link from "./Link";
-import backgroundHeader from "../../assets/images/top-header.jpg";
 import menuIcon from "../../assets/images/menu-icon.png";
 import menuIconClose from "../../assets/images/menu-icon-close.png";
 import logo from "../../assets/images/logo.png";
@@ -75,11 +74,6 @@ const Header = ({ state, actions }) => {
     <header
       css={css`
         background-color: ${state.theme.colors.darkGreen};
-        background-image: url("${backgroundHeader}");
-        background-size: 1800px 500px;
-        background-repeat: no-repeat;
-        background-position: center;
-        min-height: 200px;
 
         /* Mobile */
         @media screen and (max-width: ${state.theme.screenSizes.mobile}) {
