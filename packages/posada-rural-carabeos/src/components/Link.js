@@ -58,6 +58,7 @@ const Link = ({ href, actions, children, type }) => {
           event.preventDefault();
           actions.router.set(href);
           actions.theme.closeMenu();
+          window.scrollTo(0, 0);
         }}
       >
         {children}
