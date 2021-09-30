@@ -120,6 +120,9 @@ const Footer = ({ state }) => {
                 <Link href="/tarifas/">Tarifas</Link>
               </li>
               <li>
+                <Link href="/blog/">Blog</Link>
+              </li>
+              <li>
                 <Link href="/nuestros-amigos/">Nuestros amigos</Link>
               </li>
             </ul>

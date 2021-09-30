@@ -149,6 +149,9 @@ const Header = ({ state, actions }) => {
               <Link href="/tarifas/">Tarifas</Link>
             </li>
             <li>
+              <Link href="/blog/">Blog</Link>
+            </li>
+            <li>
               <Link href="/nuestros-amigos/">Nuestros amigos</Link>
             </li>
           </ul>
@@ -185,14 +188,14 @@ const Header = ({ state, actions }) => {
           <Link type="button" href="/actividades">
             Actividades
           </Link>
-          <Link type="button" href="/blog/">
-            Blog
-          </Link>
           <Link type="button" href="/servicios/">
             Servicios
           </Link>
           <Link type="button" href="/tarifas/">
             Tarifas
+          </Link>
+          <Link type="button" href="/blog/">
+            Blog
           </Link>
           <Link type="button" href="/nuestros-amigos/">
             Nuestros amigos
