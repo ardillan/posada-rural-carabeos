@@ -52,7 +52,7 @@ const PostsList = ({ state, libraries }) => {
 
   const Items = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 55px;
     h2 {
       font-size: 30px;
